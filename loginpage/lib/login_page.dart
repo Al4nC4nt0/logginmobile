@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
       );
     } else {
       setState(() {
-        _errorMessage = 'Credenciales inválidas';
+        _errorMessage = 'Ha ingresado Credenciales Inválidas!!!';
       });
     }
   }
@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Login', style: TextStyle(color: Colors.white)),
+        title: const Text('Login', style: TextStyle(color: Colors.white)),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -70,8 +70,8 @@ class _LoginPageState extends State<LoginPage> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blue, // Color de fondo más oscuro
-              Colors.lightBlue, // Color de fondo más claro
+              Colors.blue, 
+              Colors.lightBlue, 
             ],
           ),
         ),
@@ -84,27 +84,27 @@ class _LoginPageState extends State<LoginPage> {
                 color: Colors.red,
                 child: Text(
                   _errorMessage!,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ),
             const SizedBox(height: 30),
             Image.network(
-              'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9hL8LX8SJ4auWlPI_HvLHd9a6LE6czKxzUYYGZHu2c_PE6VC00cy3z4yuuTuCEwtZlhgcis5coLhtbZXCo9BsZ1GMzRd-B1Bh3lDzn8dzLUSgr0til-43fLjKuuMDX7Lwx0HRAxSvU5ahdeaJPdRf4euPl_stim_FCx58Fnz4eDjrM5tMb8cMR560FQ_p/s256/5087579.png',
+              'https://cdn-icons-png.flaticon.com/512/5087/5087579.png',
               height: 150,
             ),
             const SizedBox(height: 30),
             const Text(
-              "Digite los datos de acceso en los campos de abajo",
+              "Ingrese sus credenciales de acceso",
               style: TextStyle(color: Colors.white),
             ),
             const SizedBox(height: 30),
             CupertinoTextField(
               controller: _usernameController,
               cursorColor: Colors.lightBlue,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               placeholder: "Usuario",
-              placeholderStyle: TextStyle(color: Colors.white70, fontSize: 14),
-              style: TextStyle(color: Colors.white, fontSize: 14),
+              placeholderStyle: const TextStyle(color: Colors.white70, fontSize: 14),
+              style: const TextStyle(color: Colors.white, fontSize: 14),
               decoration: BoxDecoration(
                 color: Colors.black12,
                 borderRadius: BorderRadius.all(Radius.circular(7)),
@@ -114,14 +114,14 @@ class _LoginPageState extends State<LoginPage> {
             CupertinoTextField(
               controller: _passwordController,
               cursorColor: Colors.lightBlue,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               placeholder: "Contraseña",
               obscureText: true,
-              placeholderStyle: TextStyle(color: Colors.white70, fontSize: 14),
-              style: TextStyle(color: Colors.white, fontSize: 14),
+              placeholderStyle: const TextStyle(color: Colors.white70, fontSize: 14),
+              style: const TextStyle(color: Colors.white, fontSize: 14),
               decoration: BoxDecoration(
                 color: Colors.black12,
-                borderRadius: BorderRadius.all(Radius.circular(7)),
+                borderRadius: const BorderRadius.all(Radius.circular(7)),
               ),
             ),
             const SizedBox(height: 30),
@@ -129,11 +129,11 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               child: CupertinoButton(
                 padding: const EdgeInsets.all(17),
-                color: Colors.blueAccent, // Color azul claro para el botón
+                color: Colors.blueAccent, 
                 child: const Text(
-                  "Accesar",
+                  "LOGIN",
                   style: TextStyle(
-                      color: Colors.white, // Color del texto en el botón
+                      color: Colors.white, 
                       fontSize: 14,
                       fontWeight: FontWeight.w600),
                 ),
@@ -158,7 +158,7 @@ class SuccessPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('', style: TextStyle(color: Colors.white)),
+        title: const Text('', style: TextStyle(color: Colors.white)),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -166,16 +166,16 @@ class SuccessPage extends StatelessWidget {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blue, // Color de fondo más oscuro
-              Colors.lightBlue, // Color de fondo más claro
+              Colors.blue, 
+              Colors.lightBlue, 
             ],
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              "Bienvenido!",
+          children: const [
+            Text(
+              "Bienvenido a su Sistema",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
